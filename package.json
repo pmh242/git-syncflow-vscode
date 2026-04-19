@@ -1,0 +1,50 @@
+{
+  "name": "git-syncflow-vscode",
+  "displayName": "Git Syncflow",
+  "description": "Manage Git sync workflows from the VS Code command palette.",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "git-syncflow.openMenu",
+        "title": "Git Syncflow: Open Menu"
+      },
+      {
+        "command": "git-syncflow.check",
+        "title": "Git Syncflow: Check"
+      },
+      {
+        "command": "git-syncflow.update",
+        "title": "Git Syncflow: Update"
+      },
+      {
+        "command": "git-syncflow.sync",
+        "title": "Git Syncflow: Sync"
+      },
+      {
+        "command": "git-syncflow.fullSync",
+        "title": "Git Syncflow: Full Sync"
+      },
+      {
+        "command": "git-syncflow.help",
+        "title": "Git Syncflow: Help"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.0"
+  }
+}
